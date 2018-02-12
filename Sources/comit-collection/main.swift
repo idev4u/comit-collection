@@ -15,6 +15,9 @@ do { let json = try? JSONSerialization.jsonObject(with: data, options: [])
     for (index, item ) in array!.enumerated() {
         dict = (item as? [String: Any])!
         print("--------------------------------------------")
+        let userUrl = dict["html_url"] as? String
+        let username = userUrl?.split(separator: "/").last
+        print("The user: \(username!)")
         print("The \(index+1) Contributor of \(array!.count) has made \(dict["contributions"]!) contributions.")
 //        print(dict.debugDescription)
         
