@@ -10,7 +10,7 @@ do { let json = try? JSONSerialization.jsonObject(with: data, options: [])
     let array = json as? [Any]
     var dict = [String:Any]()
     
-    print("How many contributors? \(array!.count)")
+    print("We have \(array!.count) contributors for idev4u/concourse-ci-kube/contributors Repo.")
 //    print("array: \(String(describing: array))")
     for (index, item ) in array!.enumerated() {
         dict = (item as? [String: Any])!
